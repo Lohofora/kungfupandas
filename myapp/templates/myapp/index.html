@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+
+
+<head>
+    <title>Kungfu Pandas &mdash; Website for recommanded best film</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- LIEN STATIC CSS -->
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/aos.css' %}">
+     <!-- MAIN CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+  
+</head>
+
+
+
+
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="site-wrap" id="home-section">
+
+        <div class="site-mobile-menu site-navbar-target">
+          <div class="site-mobile-menu-header">
+            <div class="site-mobile-menu-close mt-3">
+              <span class="icon-close2 js-menu-toggle"></span>
+            </div>
+          </div>
+          <div class="site-mobile-menu-body"></div>
+        </div>
+
+        <header class="site-navbar site-navbar-target" role="banner">
+            <div class="container">
+              <div class="row align-items-center position-relative">
+                    <div class="col-3 ">
+                  <div class="site-logo">
+                    <a href="index.html"></a>
+                  </div>
+                </div>
+                <div class="col-9  text-right">
+                  <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
+                  <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                    <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                      <li class="active"><a href="index.html" class="nav-link">Accueil</a></li>
+                      <li><a href="{% url 'services' %}" class="nav-link">Simulateur Kp²</a></li>
+                      <li><a href="{% url 'about' %}" class="nav-link">Notre équipe</a></li>
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </header>
+        
+          <div class="ftco-blocks-cover-1">
+            <div class="site-section-cover overlay" data-stellar-background-ratio="0.5"
+                 style="background-image: url('{% static "myapp/images/wall_site.png" %}');">
+                <div class="container">
+                    <div class="row align-items-center justify-content-center text-center">
+                        <div class="col-md-7">
+                            <h1 class="mb-3" style="color:#fefefe;">Kungfu Pandas Project</h1>
+                            <p>Un outil de prévision des titres de films qui vont maximiser vos ventes en fonction du profil de votre audimat</p>
+                            <p><a href="{% url 'services' %}" class="btn btn-primary">Simulateur Kp²</a></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+          <div class="site-section">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                  <div class="img-years">
+                    <img src="{%static 'myapp/images/index1.jpeg' %}" alt="Image" class="img-fluid">
+                    <div class="year">
+                      <span>1 <span>mois de travail <br>d'ingénierie</span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-5 ml-auto pl-lg-5 text-center">
+                  <h1 class="text-center" style = "color:#c42929c9">Bienvenue sur Kp² !</h1><br>
+                  <p class="mb-5 lead">Le simulateur Kp² résulte d'une collaboration étroite entre trois ingénieur·e·s de la Wild code school avec les habitants et animaux creusois et creusoises.
+                    En partant d'un film envoyé, il offre la possibilité de prévoir les films s'en rapprochant qui maximiseront le nombre d'entrées dans les cinémas creusois.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="site-section bg-light">
+            <div class="container">
+              <div class="row justify-content-center  mb-5">
+                <div class="col-md-7 text-center">
+                  <h1 class="text-center" style = "color:#c42929c9">C'est de saison ! </h1><br>
+                  <p class="mb-5 lead"> En ce moment : journées des plantes dans la Creuse. Poursuivez cet événement festif avec une sortie cinéma !</p>
+                  <p class="text-center">
+                    <a href="#" class="btn btn-primary custom-prev"> &#x2190; Précédent</a>
+                    <a href="#" class="btn btn-primary custom-next">Suivant &#x2192;</a>
+                  </p>
+                </div>
+            </div>
+            <div class="row">
+              <div class="col-12">
+                    <div class="nonloop-block-13 owl-carousel d-flex">
+                  
+                  <!-- AFFICHES FILMS EN LIEN AVEC EVENT -->
+                  <div class="item-1 h">
+                    <img src="https://image.tmdb.org/t/p/w500/ns5D8bAKWTDxBictNDaTRf5d0Jt.jpg" alt="Image" class="img-fluid">
+                  </div>
+                  <div class="item-1 h">
+                    <img src="https://image.tmdb.org/t/p/w500/22pMgkmxfoPdAKc04M6vzMOKgq1.jpg" alt="Image" class="img-fluid">
+                    </div>  
+                  <div class="item-1 h">
+                    <img src="https://image.tmdb.org/t/p/w500/kyeqWdyUXW608qlYkRqosgbbJyK.jpg" alt="Image" class="img-fluid">
+                    </div>
+                  <div class="item-1 h">
+                      <img src="https://image.tmdb.org/t/p/w500/6oom5QYQ2yQTMJIbnvbkBL9cHo6.jpg" alt="Image" class="img-fluid">
+                    </div>
+                  <div class="item-1 h">
+                      <img src="https://image.tmdb.org/t/p/w500/jAD6Ofuz4PiYFV3fd3oBP6aOTyM.jpg" alt="Image" class="img-fluid">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+        
+    <!-- LIEN STATIC JAVASCRIPT -->
+    <script src="{% static 'myapp/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery-migrate-3.0.0.js' %}"></script>
+    <script src="{% static 'myapp/js/popper.min.js' %}"></script>
+    <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'myapp/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'myapp/js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'myapp/js/aos.js' %}"></script>
+    <!-- MAIN JS -->
+    <script src="{% static 'myapp/js/main.js' %}"></script>
+
+</body>
+
+
+
+
+
+</html>

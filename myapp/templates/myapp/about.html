@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+
+
+
+
+  <head>
+    <title>Kungfu Pandas &mdash; Website for recommanded best film</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- LIEN STATIC CSS -->
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/bootstrap-datepicker.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/owl.theme.default.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/fonts/flaticon/font/flaticon.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/aos.css' %}">
+     <!-- MAIN CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/style.css' %}">
+</head>
+
+
+
+
+
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+    <div class="site-wrap" id="home-section">
+
+      <div class="site-mobile-menu site-navbar-target">
+        <div class="site-mobile-menu-header">
+          <div class="site-mobile-menu-close mt-3">
+            <span class="icon-close2 js-menu-toggle"></span>
+          </div>
+        </div>
+        <div class="site-mobile-menu-body"></div>
+      </div>
+
+      <header class="site-navbar site-navbar-target" role="banner">
+        <div class="container">
+          <div class="row align-items-center position-relative">
+            <div class="col-3 ">
+              <div class="site-logo">
+                <a href="{% url 'index' %}"></a>
+              </div>
+            </div>
+            <div class="col-9  text-right">
+              <span class="d-inline-block d-lg-none"><a href="#" class="text-white site-menu-toggle js-menu-toggle py-5 text-white"><span class="icon-menu h3 text-white"></span></a></span>
+              <nav class="site-navigation text-right ml-auto d-none d-lg-block" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav ml-auto ">
+                  <li><a href="{% url 'index' %}" class="nav-link">Accueil</a></li>
+                  <li><a href="{%url 'services' %}" class="nav-link">Simulateur Kp²</a></li>
+                  <li class="active"><a href="{% url 'about'%}" class="nav-link">Notre équipe</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+    
+    <div class="site-section bg-light" 
+      style="background-image: url('{%static "myapp/images/about.jpg" %}');">
+        <div class="container">
+          <div class="row justify-content-center text-center mb-1 section-2-title">
+            <div class="col-md-6">
+              <h3 class="scissors text-center">Notre équipe</h3>
+            </div>
+          </div>
+
+          <div class="row align-items-stretch">
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1">
+                <img src="{%static 'myapp/images/M._Ping.png' %}" alt="Image"
+                 class="img-fluid">
+              <div class="post-entry-1-contents">
+                <span class="meta">Père plumé de Po</span>
+                <h2>M. San Ping</h2>
+                <p>Jamais radin sur la nouille, il régale les pupilles et papilles de ses convives.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1">
+                <img src="{% static 'myapp/images/noemie.jpg' %}" alt="Image"
+                 class="img-fluid">
+              <div class="post-entry-1-contents">
+                <span class="meta">Maitre pandas</span>
+                <h2>Noémie</h2>
+                <p>Haltérophile de la data, elle soulève comme une boucle while jamais incrémentée.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1">
+                <img src="{%static 'myapp/images/shiffu.jpg' %}" alt="Image"
+                 class="img-fluid">
+              <div class="post-entry-1-contents">
+                <span class="meta">Maitre de Po</span>
+                <h2>Shifu</h2>
+                <p>Aussi vif que l'éclair, sa petitesse n'a d'égal que sa rigueur  à l'entrainement.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1">
+                <img src="{%static 'myapp/images/selyan.jpg' %}" alt="Image"
+                 class="img-fluid">
+              <div class="post-entry-1-contents">
+                <span class="meta">Maitre pandas</span>
+                <h2>Selyan</h2>
+                <p>Passionné de sport et de machine learning, il ne connait pas l'underfitting.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1">
+                <img src="{%static 'myapp/images/master_tigress.jpg' %}" alt="Image"
+                 class="img-fluid">
+              <div class="post-entry-1-contents">
+                <span class="meta">Maitre Kung Fu</span>
+                <h2>Maitre Tigresse</h2>
+                <p>Elle rugit comme un guépard et bondit comme un lion.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-5">
+            <div class="post-entry-1 h-100 person-1">
+                <img src="{%static 'myapp/images/marion.jpg' %}" alt="Image"
+                 class="img-fluid">
+              <div class="post-entry-1-contents">
+                <span class="meta"><Main>Maitre pandas</Main></span>
+                <h2>Marion</h2>
+                <p>Elle cultive un amour fou pour la méthode Lambda sans pour autant devenir lambda. </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIEN STATIC JAVASCRIPT -->
+    <script src="{% static 'myapp/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery-migrate-3.0.0.js' %}"></script>
+    <script src="{% static 'myapp/js/popper.min.js' %}"></script>
+    <script src="{% static 'myapp/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'myapp/js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.sticky.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.stellar.min.js' %}"></script>
+    <script src="{% static 'myapp/js/jquery.easing.1.3.js' %}"></script>
+    <script src="{% static 'myapp/js/bootstrap-datepicker.min.js' %}"></script>
+    <script src="{% static 'myapp/js/aos.js' %}"></script>
+    <!-- MAIN JS -->
+    <script src="{% static 'myapp/js/main.js' %}"></script>
+    
+  </body>
+
+
+
+
+  
+</html>
